@@ -45,6 +45,5 @@
   "devDependencies": {
     "gh-pages": "^6.3.0",
     "prettier": "^2.7.1"
-  },
-  "homepage": "https://isaacvanhorn.com"
+  }
 }
