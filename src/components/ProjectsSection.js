@@ -7,6 +7,7 @@ const projects = [
   {
     title: "Enterprise resource planning software",
     status: "In Progress",
+    programmingLanguage: "Ruby on Rails",
     description:
       "An all-in-one ERP software to manage projects, invoicing, clients and team members with a beautiful dashboard and powerful reporting tools.",
     getImageSrc: () => require("../images/photo1.jpg"),
@@ -57,6 +58,8 @@ const ProjectsSection = () => {
             description={project.description}
             imageSrc={project.getImageSrc()}
             exampleUrl={project.url}
+            status={(project.status) ? project.status : "N/A"}
+            programmingLanguage={(project.programmingLanguage) ? project.programmingLanguage : "N/A"}
           />
         ))}
       </Box>
