@@ -1,27 +1,21 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import Header from "./components/Header";
-import LandingSection from "./components/LandingSection";
-import ProjectsSection from "./components/ProjectsSection";
-import ContactMeSection from "./components/ContactMeSection";
-import Footer from "./components/Footer";
-import { AlertProvider } from "./context/alertContext";
-import Alert from "./components/Alert";
+import { Route } from "react-router-dom";
+import Home from "./home";
+import Timer from "./timer";
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'timer', element: <Timer /> },
+    ],
+  },
+]);
+
 
 function App() {
-  return (
-    <ChakraProvider>
-      <AlertProvider>
-        <main>
-          <Header />
-          <LandingSection />
-          <ProjectsSection />
-          <ContactMeSection />
-          <Footer />
-          <Alert />
-        </main>
-      </AlertProvider>
-    </ChakraProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
