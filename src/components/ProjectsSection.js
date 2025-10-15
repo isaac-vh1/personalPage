@@ -17,8 +17,7 @@ const projects = [
     status: "Completed",
     description:
       "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
-    getImageSrc: () => require("../images/photo2.jpg"),
-    url
+    getImageSrc: () => require("../images/photo2.jpg")
   },
   {
     title: "Photo Gallery",
