@@ -5,16 +5,20 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "React Space",
+    title: "Enterprise resource planning software",
+    status: "In Progress",
     description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
+      "An all-in-one ERP software to manage projects, invoicing, clients and team members with a beautiful dashboard and powerful reporting tools.",
     getImageSrc: () => require("../images/photo1.jpg"),
+    url: "/projects/ERP"
   },
   {
-    title: "React Infinite Scroll",
+    title: "Test",
+    status: "Completed",
     description:
       "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
     getImageSrc: () => require("../images/photo2.jpg"),
+    url
   },
   {
     title: "Photo Gallery",
@@ -53,6 +57,7 @@ const ProjectsSection = () => {
             title={project.title}
             description={project.description}
             imageSrc={project.getImageSrc()}
+            exampleUrl={project.url}
           />
         ))}
       </Box>

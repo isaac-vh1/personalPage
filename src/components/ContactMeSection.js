@@ -25,22 +25,22 @@ const ContactMeSection = () => {
     initialValues: {
       firstName: "",
       email: "",
-      type: "hireMe", // 默認選項
+      type: "hireMe",
       comment: "",
     },
     onSubmit: async (values, { resetForm }) => {
-      const result = await submit(values); // 提交表單數據
+      const result = await submit(values);
       if (result.success) {
-        resetForm(); // 成功提交後重置表單
+        resetForm();
       }
     },
     validationSchema: Yup.object({
-      firstName: Yup.string().required("Required"), // 必填
-      email: Yup.string().email("Invalid email address").required("Required"), // 有效電子郵件地址
-      type: Yup.string(), // 類型選項
+      firstName: Yup.string().required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
+      type: Yup.string(),
       comment: Yup.string()
-        .min(25, "Must be at least 25 characters") // 最小字數限制
-        .required("Required"), // 必填
+        .min(25, "Must be at least 25 characters")
+        .required("Required"),
     }),
   });
 
@@ -89,9 +89,9 @@ const ContactMeSection = () => {
                 />
                 <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
               </FormControl>
-              {/* Type of Enquiry */}
+              {/* Type of inquiry */}
               <FormControl>
-                <FormLabel htmlFor="type">Type of enquiry</FormLabel>
+                <FormLabel htmlFor="type">Type of inquiry</FormLabel>
                 <Select id="type" name="type" {...formik.getFieldProps("type")}>
                   <option value="hireMe">Freelance project proposal</option>
                   <option value="openSource">Open source consultancy session</option>

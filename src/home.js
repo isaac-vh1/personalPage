@@ -15,7 +15,6 @@ return (
           <Header />
           <LandingSection />
           <ProjectsSection />
-          <ContactMeSection />
           <Footer />
           <Alert />
         </main>
