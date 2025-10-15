@@ -1,6 +1,7 @@
-import { Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./home";
 import Timer from "./timer";
+import Layout from "./layout"
 
 const router = createBrowserRouter([
   {
