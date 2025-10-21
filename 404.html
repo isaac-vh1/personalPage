@@ -11,7 +11,7 @@
         var redirectParam = encodeURIComponent(l.pathname + l.search + l.hash);
         // If you deploy at the domain root (custom domain), index is at '/index.html'
         // If you deploy under a subpath, prefix it, e.g., '/myapp/index.html'
-        var indexPath = '/index.html';
+        var indexPath = '/';
         window.location.replace(indexPath + '?redirect=' + redirectParam);
       })();
     </script>
