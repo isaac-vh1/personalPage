@@ -1,9 +1,12 @@
-import { Outlet, Link } from "react-router-dom";
+// src/layout.jsx
+import { Outlet } from "react-router-dom";
+import RedirectHandler from "./RedirectHandler";
 
-const Layout = () => (
-  <div>
-    <Outlet />
-  </div>
-);
-
-export default Layout;
+export default function Layout() {
+  return (
+    <>
+      <RedirectHandler />
+      <Outlet />
+    </>
+  );
+}
