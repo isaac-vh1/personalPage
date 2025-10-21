@@ -4,7 +4,7 @@ function Timer() {
         <main>
         <div style={{ height: '100%', width: '100%', backgroundColor: 'white' }}>
         <iframe
-            src="https://script.google.com/macros/s/AKfycbw7_5DwWQPgSPX_wvPc9CqlE7DpPa7VUnWBZ1ye8EJQo-K1FkHM_3jTKbCKPZO5s9uq/exec"
+            src="https://script.google.com/macros/s/AKfycbzOOP7dIcW5TkWujpNW1mJUVRIe8la1TKmNAEsl4qN2JZTLhI6lVYuXRBrUMmD1EsBr/exec"
             title="Google Script"
             width="100%"
             height="1000px"

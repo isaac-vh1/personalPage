@@ -14,7 +14,7 @@ const Footer = () => {
           maxWidth="1024px"
           height={16}
         >
-          <p>Isaac • © {new Date().getFullYear()}</p>
+          <p>Isaac Van Horn • © {new Date().getFullYear()}</p>
         </Flex>
       </footer>
     </Box>

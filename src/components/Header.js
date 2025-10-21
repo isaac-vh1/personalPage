@@ -101,7 +101,6 @@ const Header = () => {
                 _hover={{ textDecoration: "none" }}
                 color="white"
               >
-                Contact Me
               </Link>
             </HStack>
           </nav>

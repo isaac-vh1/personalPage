@@ -7,29 +7,31 @@ const projects = [
   {
     title: "Enterprise resource planning software",
     status: "In Progress",
-    programmingLanguage: "Ruby on Rails",
+    programmingLanguage: "React",
     description:
       "An all-in-one ERP software to manage projects, invoicing, clients and team members with a beautiful dashboard and powerful reporting tools.",
     getImageSrc: () => require("../images/photo1.jpg"),
     url: "/projects/ERP"
   },
   {
-    title: "Test",
+    title: "N/A",
     status: "Completed",
     description:
-      "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
+      "This project is not yet documented. Please check back later for more information about this exciting project.",
     getImageSrc: () => require("../images/photo2.jpg")
   },
   {
-    title: "Photo Gallery",
+    title: "N/A",
+    status: "Completed",
     description:
-      "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
+      "This project is not yet documented. Please check back later for more information about this exciting project.",
     getImageSrc: () => require("../images/photo3.jpg"),
   },
   {
-    title: "Event planner",
+    title: "N/A",
+    status: "Completed",
     description:
-      "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
+      "This project is not yet documented. Please check back later for more information about this exciting project.",
     getImageSrc: () => require("../images/photo4.jpg"),
   },
 ];
@@ -37,7 +39,7 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <FullScreenSection
-      backgroundColor="#14532d"
+      backgroundColor="#1300a1ff"
       isDarkBackground
       p={8}
       alignItems="flex-start"
@@ -48,8 +50,13 @@ const ProjectsSection = () => {
       </Heading>
       <Box
         display="grid"
-        gridTemplateColumns="repeat(2,minmax(0,1fr))"
-        gridGap={8}
+        gridTemplateColumns={{
+          base: "repeat(1, minmax(0, 1fr))", // phones
+          sm:   "repeat(2, minmax(0, 1fr))", // small tablets
+          md:   "repeat(3, minmax(0, 1fr))", // tablets
+          lg:   "repeat(4, minmax(0, 1fr))", // desktops
+        }}
+        gap={{ base: 4, md: 6, lg: 8 }}
       >
         {projects.map((project) => (
           <Card

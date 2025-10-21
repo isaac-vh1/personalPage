@@ -1,6 +1,7 @@
 import React from "react";
 import { Avatar, Heading, VStack, Text } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
+import isaac from "../images/isaac.jpeg";
 
 const greeting = "Hello, I am Isaac!";
 const bio1 = "A full-stack developer";
@@ -11,12 +12,12 @@ const LandingSection = () => (
     justifyContent="center"
     alignItems="center"
     isDarkBackground
-    backgroundColor="#4db14aff"
+    backgroundColor="#693432ff"
   >
     {/* VStack to vertically stack the content */}
     <VStack spacing={4}>
       {/* Avatar Component for displaying the user's profile picture */}
-      <Avatar size="xl" src="https://i.pravatar.cc/150?img=7" alt="Pete's Avatar" />
+      <Avatar size="xl" src={isaac} alt="Isaac's Avatar" />
       {/* Heading for the greeting message */}
       <Heading as="h1" size="2xl" color="white">
         {greeting}

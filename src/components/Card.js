@@ -43,7 +43,7 @@ const Card = ({ title, description, imageSrc, url, status, programmingLanguage }
         <Text color="gray.600" fontSize="md">{description}</Text>
         <HStack spacing={2}>
           <Button variant="link" onClick={url} colorScheme="teal" rightIcon={<FontAwesomeIcon icon={faArrowRight} size="1x" />}>
-            Demo
+            Learn More
           </Button>
         </HStack>
       </VStack>
