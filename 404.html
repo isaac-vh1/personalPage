@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (function () {
+        // Build a redirect URL to index.html with original path preserved
+        var l = window.location;
+        var redirectParam = encodeURIComponent(l.pathname + l.search + l.hash);
+        // If you deploy at the domain root (custom domain), index is at '/index.html'
+        // If you deploy under a subpath, prefix it, e.g., '/myapp/index.html'
+        var indexPath = '/index.html';
+        window.location.replace(indexPath + '?redirect=' + redirectParam);
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting…
+  </body>
+</html>
