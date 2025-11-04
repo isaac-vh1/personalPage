@@ -13,7 +13,9 @@ const router = createBrowserRouter([
       { path: '*', element: <Navigate to="/" /> },
     ],
   },
-]);
+],
+{ basename: '/' } // domain root
+);
 
 
 function App() {
