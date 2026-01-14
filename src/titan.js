@@ -8,12 +8,12 @@ import { Spinner } from 'react-bootstrap';
 const SAMPLE = "01031201d60039000f002a000008ae010d025500028836";
 
 export default function Titan() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [frame, setFrame] = useState(parseVendorFrameHex(SAMPLE));
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    //setLoading(true);
+    setLoading(true);
     fetch ("https://titan.isaacvanhorn.com")
       .then(response => {
         if (!response.ok) {
