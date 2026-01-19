@@ -131,7 +131,7 @@ export default function Titan() {
             <dt>Flags</dt>
             <dd>{frame.flags ?? "—"}</dd>
             <dt>Status 1</dt>
-            <dd>{frame.status1 ?? "—"}</dd>
+            <dd>{frame.status1 !== undefined ? (frame.status1 ? "Charging" : "Not Charging") : "—"}</dd>
             <dt>Status 2</dt>
             <dd>{frame.status2 ?? "—"}</dd>
             <dt>Unknown 2</dt>
