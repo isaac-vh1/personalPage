@@ -5,15 +5,15 @@ import { useState, useEffect } from "react";
 import { parseVendorFrameHex } from "./vendorFrame.js";
 import { Spinner } from 'react-bootstrap';
 
-const SAMPLE = " 010312022d0044001200330000056e010e017700024408";
+const SAMPLE = "";
 
 export default function Titan() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [frame, setFrame] = useState(parseVendorFrameHex(SAMPLE));
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    //setLoading(true);
+    setLoading(true);
     fetch ("https://titan.isaacvanhorn.com/scan-and-read", {
       method: "POST",
       headers: {
