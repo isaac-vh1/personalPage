@@ -7,7 +7,7 @@ import { Spinner } from 'react-bootstrap';
 
 export default function Titan() {
   const [loading, setLoading] = useState(true);
-  const [frame, setFrame] = useState(parseVendorFrameHex(SAMPLE));
+  const [frame, setFrame] = useState(parseVendorFrameHex("0"));
   const [error, setError] = useState(false);
   useEffect(() => {
     setLoading(true);
