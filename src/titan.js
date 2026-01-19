@@ -5,16 +5,23 @@ import { useState, useEffect } from "react";
 import { parseVendorFrameHex } from "./vendorFrame.js";
 import { Spinner } from 'react-bootstrap';
 
-const SAMPLE = "01031201d60039000f002a000008ae010d025500028836";
+const SAMPLE = " 010312022d0044001200330000056e010e017700024408";
 
 export default function Titan() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [frame, setFrame] = useState(parseVendorFrameHex(SAMPLE));
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
-    fetch ("https://titan.isaacvanhorn.com")
+    //setLoading(true);
+    fetch ("https://titan.isaacvanhorn.com/scan-and-read", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({})
+     }
+    )
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
