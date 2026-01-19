@@ -5,13 +5,10 @@ import { useState, useEffect } from "react";
 import { parseVendorFrameHex } from "./vendorFrame.js";
 import { Spinner } from 'react-bootstrap';
 
-const SAMPLE = "";
-
 export default function Titan() {
   const [loading, setLoading] = useState(true);
   const [frame, setFrame] = useState(parseVendorFrameHex(SAMPLE));
   const [error, setError] = useState(false);
-
   useEffect(() => {
     setLoading(true);
     fetch ("https://titan.isaacvanhorn.com/scan-and-read", {
@@ -24,22 +21,26 @@ export default function Titan() {
     )
       .then(response => {
         if (!response.ok) {
+          setError(true);
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         return response.json();
       })
       .then(data => {
-        setFrame(parseVendorFrameHex(data));
+        console.log("Received data:", data);
+        setFrame(parseVendorFrameHex(data.data));
+        console.log("Parsed frame:", parseVendorFrameHex(data.data));
         setLoading(false);
       })
       .catch(error => {
         console.error("Error fetching data:", error);
+        setError(true);
       });
   }, []);
 
   return (
     <div style={{ fontFamily: "system-ui", lineHeight: 1.5, width: "100%", background: "white", height: "100vh", padding: 24, boxSizing: "border-box", overflowBehavior: "hidden" }}>
-      <h2>Decoded Telemetry</h2>
+      <h2>Point Zero Titan</h2>
       {error ? (<h1>Error Loading data from server please refresh and try again. If error persists contact developer.</h1>) : null}
       {frame.warnings?.length ? (
         <div style={{ color: "#b00" }}>
