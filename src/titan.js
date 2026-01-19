@@ -30,11 +30,12 @@ export default function Titan() {
         console.log("Received data:", data);
         setFrame(parseVendorFrameHex(data.data));
         console.log("Parsed frame:", parseVendorFrameHex(data.data));
-        setLoading(false);
       })
       .catch(error => {
         console.error("Error fetching data:", error);
         setError(true);
+      }).finally(() => {
+        setLoading(false);
       });
   }, []);
 
