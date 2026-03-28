@@ -26,20 +26,20 @@ const Card = ({ title, description, imageSrc, url, status, programmingLanguage }
       <VStack align="start" spacing={4}>
         <Image src={imageSrc} alt={title} borderRadius="md" />
         <Heading style={{ color: "black" }} as="h3" size="lg">{title}</Heading>
-        <Box
+        {/*<Box
           borderRadius="lg"
           overflow="hidden"
           boxShadow="sm"
           bg={color}
           p={1.5}>{status}
-        </Box>
-        {/*<Box
+        </Box>*/}
+        <Box
           borderRadius="lg"
           overflow="hidden"
           boxShadow="sm"
           bg={plColor}
           p={2}>{programmingLanguage}
-        </Box>*/}
+        </Box>*/
         <Text color="gray.600" fontSize="md">{description}</Text>
         <HStack spacing={2}>
           <Button variant="link" onClick={url} colorScheme="teal" rightIcon={<FontAwesomeIcon icon={faArrowRight} size="1x" />}>

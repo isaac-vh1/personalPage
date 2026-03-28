@@ -4,8 +4,8 @@ import FullScreenSection from "./FullScreenSection";
 import isaac from "../images/isaac.jpeg";
 
 const greeting = "Hello, I am Isaac!";
-const bio1 = "A full-stack developer";
-const bio2 = "specialised in React";
+const bio1 = "A Computer Science student at Seattle University";
+const bio2 = "I am passionate about software development and love to create projects that solve real-world problems.";
 
 const LandingSection = () => (
   <FullScreenSection
@@ -14,15 +14,11 @@ const LandingSection = () => (
     isDarkBackground
     backgroundColor="#693432ff"
   >
-    {/* VStack to vertically stack the content */}
     <VStack spacing={4}>
-      {/* Avatar Component for displaying the user's profile picture */}
       <Avatar size="xl" src={isaac} alt="Isaac's Avatar" />
-      {/* Heading for the greeting message */}
       <Heading as="h1" size="2xl" color="white">
         {greeting}
       </Heading>
-      {/* Bio1 and Bio2 for the description */}
       <Text fontSize="xl" color="white">
         {bio1}
       </Text>

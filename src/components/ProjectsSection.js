@@ -9,22 +9,24 @@ const projects = [
     status: "In Progress",
     programmingLanguage: "React",
     description:
-      "An all-in-one ERP software to manage projects, invoicing, clients and team members with a beautiful dashboard and powerful reporting tools.",
+      "An all-in-one ERP software to manage projects, invoicing, clients and team members within a centralized and user-friendly interface.",
     getImageSrc: () => require("../images/photo1.jpg"),
-    url: "/projects/ERP"
+    url: "https://github.com/isaac-vh1/ABI"
   },
   {
-    title: "N/A",
+    title: "BLE Retrieval tool",
     status: "Completed",
+    programmingLanguage: "Python",
     description:
-      "This project is not yet documented. Please check back later for more information about this exciting project.",
-    getImageSrc: () => require("../images/photo2.jpg")
-  },
+      "A script designed to retrieve data from a device that requires a proprietary Bluetooth Low Energy (BLE) protocol. The script mimics the behavior of the original application, allowing users to access and retrieve data from the device without the original software.",
+    url:"https://github.com/isaac-vh1/titan"
+    },
   {
-    title: "N/A",
+    title: "ERP Simulation",
     status: "Completed",
+    programmingLanguage: "Ruby on Rails",
     description:
-      "This project is not yet documented. Please check back later for more information about this exciting project.",
+      "A Washington Business Week - sponsored capstone project designed to simulate ERP functionality and support instruction in business processes for high school students",
     getImageSrc: () => require("../images/photo3.jpg"),
   },
   {
