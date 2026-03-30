@@ -59,7 +59,7 @@ const ProjectsSection = () => {
             title={project.title}
             description={project.description}
             imageSrc={project.getImageSrc ? project.getImageSrc() : require("../images/photo2.jpg")}
-            exampleUrl={project.url}
+            url={project.url}
             status={(project.status) ? project.status : "N/A"}
             programmingLanguage={(project.programmingLanguage) ? project.programmingLanguage : "N/A"}
           />
