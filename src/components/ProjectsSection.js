@@ -5,11 +5,11 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "Enterprise resource planning software",
+    title: "ERP Software",
     status: "In Progress",
     programmingLanguage: "React",
     description:
-      "An all-in-one ERP software to manage projects, invoicing, clients and team members within a centralized and user-friendly interface.",
+      "An all-in-one Enterprise Resource Planning software to manage projects, invoicing, clients and contractors within a centralized and user-friendly interface.",
     getImageSrc: () => require("../images/photo1.jpg"),
     url: "https://github.com/isaac-vh1/ABI"
   },
@@ -18,7 +18,7 @@ const projects = [
     status: "Completed",
     programmingLanguage: "Python",
     description:
-      "A script designed to retrieve data from a device that requires a proprietary Bluetooth Low Energy (BLE) protocol. The script mimics the behavior of the original application, allowing users to access and retrieve data from the device without the original software.",
+      "Using an APK file this project reverse engineered the logic used to connect to the Point Zero Titan battery system. While hosting on a local server, this allows for remote monitoring beyond Bluetooth range, improving reliability and usability.",
     url:"https://github.com/isaac-vh1/titan"
     },
   {
@@ -26,16 +26,9 @@ const projects = [
     status: "Completed",
     programmingLanguage: "Ruby on Rails",
     description:
-      "A Washington Business Week - sponsored capstone project designed to simulate ERP functionality and support instruction in business processes for high school students",
+      "A Washington Business Week sponsored capstone project designed to simulate ERP functionality and support instruction in business processes for high school students",
     getImageSrc: () => require("../images/photo3.jpg"),
-  },
-  {
-    title: "N/A",
-    status: "Completed",
-    description:
-      "This project is not yet documented. Please check back later for more information about this exciting project.",
-    getImageSrc: () => require("../images/photo4.jpg"),
-  },
+  }
 ];
 
 const ProjectsSection = () => {

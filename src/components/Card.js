@@ -7,10 +7,11 @@ const Card = ({ title, description, imageSrc, url, status, programmingLanguage }
   const color = status === "In Progress" ? "#fbbf24" : status === "Completed" ? "green.400" : "gray.400";
   const colorMap = {
       "JavaScript": "yellow.300",
-      "Python": "blue.400",
+      "Python": "blue.500",
       "Ruby on Rails": "red.400",
       "Java": "orange.400",
       "C++": "purple.400",
+      "React": "cyan.500",
       "N/A": "gray.400"
     };
   const plColor = colorMap[programmingLanguage] || "gray.400";
