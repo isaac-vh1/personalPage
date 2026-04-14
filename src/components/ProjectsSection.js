@@ -30,7 +30,6 @@ const projects = [
     description:
       "A Washington Business Week sponsored capstone project designed to simulate ERP functionality and enhance instruction for high school students",
     getImageSrc: () => require("../images/photo3.jpg"),
-    demo: "https://isaac-vh1.github.io/ERP-Simulation/"
   }
 ];
 
