@@ -21,7 +21,7 @@ const projects = [
     description:
       "Using an APK file and leveraging AI this project reverse engineered the logic used to connect to the Point Zero Titan battery system. While hosting on a local server, this allows for remote monitoring beyond Bluetooth range, improving reliability and usability.",
     url:"https://github.com/isaac-vh1/titan",
-    demo: "https://isaac-vh1.github.io/Titan-Remote/"
+    demo: "isaacvanhorn.com/titan"
   },
   {
     title: "ERP Simulation",

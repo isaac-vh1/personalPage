@@ -2,8 +2,10 @@ import React from "react";
 import { Box, HStack, VStack, Image, Heading, Text, Button } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({ title, description, imageSrc, url, status, programmingLanguage, demo}) => {
+  const navigate = useNavigate();
   const color = status === "In Progress" ? "#fbbf24" : status === "Completed" ? "green.400" : "gray.400";
   const colorMap = {
       "JavaScript": "yellow.300",
@@ -49,7 +51,7 @@ const Card = ({ title, description, imageSrc, url, status, programmingLanguage, 
           </Button>
           )}
           {demo && (
-            <Button variant="link" onClick={() => window.open(demo, "_blank")} colorScheme="teal" rightIcon={<FontAwesomeIcon icon={faArrowRight} size="1x" />}>
+            <Button variant="link" onClick={() => navigate(`/demo?url=${encodeURIComponent(demo)}&title=${encodeURIComponent(title)}`)} colorScheme="teal" rightIcon={<FontAwesomeIcon icon={faArrowRight} size="1x" />}>
               Demo
             </Button>
           )}
