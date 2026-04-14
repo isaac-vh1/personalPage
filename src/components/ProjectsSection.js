@@ -5,29 +5,32 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "ERP Software",
+    title: "Ground Control (ERP)",
     status: "In Progress",
     programmingLanguage: "React",
     description:
       "An all-in-one Enterprise Resource Planning software to manage projects, invoicing, clients and contractors within a centralized and user-friendly interface.",
     getImageSrc: () => require("../images/photo1.jpg"),
-    url: "https://github.com/isaac-vh1/ABI"
+    url: "https://github.com/isaac-vh1/ERP-demo",
+    demo: "https://isaac-vh1.github.io/ERP-Demo/"
   },
   {
-    title: "BLE Retrieval tool",
+    title: "Titan Remote",
     status: "Completed",
     programmingLanguage: "Python",
     description:
-      "Using an APK file this project reverse engineered the logic used to connect to the Point Zero Titan battery system. While hosting on a local server, this allows for remote monitoring beyond Bluetooth range, improving reliability and usability.",
-    url:"https://github.com/isaac-vh1/titan"
-    },
+      "Using an APK file and leveraging AI this project reverse engineered the logic used to connect to the Point Zero Titan battery system. While hosting on a local server, this allows for remote monitoring beyond Bluetooth range, improving reliability and usability.",
+    url:"https://github.com/isaac-vh1/titan",
+    demo: "https://isaac-vh1.github.io/Titan-Remote/"
+  },
   {
     title: "ERP Simulation",
     status: "Completed",
     programmingLanguage: "Ruby on Rails",
     description:
-      "A Washington Business Week sponsored capstone project designed to simulate ERP functionality and support instruction in business processes for high school students",
+      "A Washington Business Week sponsored capstone project designed to simulate ERP functionality and enhance instruction for high school students",
     getImageSrc: () => require("../images/photo3.jpg"),
+    demo: "https://isaac-vh1.github.io/ERP-Simulation/"
   }
 ];
 

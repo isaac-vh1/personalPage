@@ -43,9 +43,16 @@ const Card = ({ title, description, imageSrc, url, status, programmingLanguage }
         </Box>*/
         <Text color="gray.600" fontSize="md">{description}</Text>
         <HStack spacing={2}>
+          {url && (
           <Button variant="link" onClick={() => window.open(url, "_blank")} colorScheme="teal" rightIcon={<FontAwesomeIcon icon={faArrowRight} size="1x" />}>
             Learn More
           </Button>
+          )}
+          {demo && (
+            <Button variant="link" onClick={() => window.open(demo, "_blank")} colorScheme="teal" rightIcon={<FontAwesomeIcon icon={faArrowRight} size="1x" />}>
+              Demo
+            </Button>
+          )}
         </HStack>
       </VStack>
     </Box>
