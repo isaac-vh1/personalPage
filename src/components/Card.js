@@ -47,7 +47,7 @@ const Card = ({ title, description, imageSrc, url, status, programmingLanguage, 
         <HStack spacing={2}>
           {url && (
           <Button variant="link" onClick={() => window.open(url, "_blank")} colorScheme="teal" rightIcon={<FontAwesomeIcon icon={faArrowRight} size="1x" />}>
-            Learn More
+            Code Base
           </Button>
           )}
           {demo && (
