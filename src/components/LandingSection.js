@@ -2,6 +2,7 @@ import React from "react";
 import { Avatar, Heading, VStack, Text } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import isaac from "../images/isaac.jpeg";
+import bgImage from "../images/IMG_9761.jpeg";
 
 const greeting = "Hello, I am Isaac!";
 const bio1 = "A Computer Science student at Seattle University";
@@ -12,9 +13,15 @@ const LandingSection = () => (
     justifyContent="center"
     alignItems="center"
     isDarkBackground
-    backgroundColor="#693432ff"
+    backgroundColor="transparent"
+    style={{
+      backgroundImage: `url(${bgImage})`,
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+    }}
   >
-    <VStack spacing={4}>
+    <VStack spacing={4} backgroundColor="rgba(0,0,0,0.6)" padding={8} borderRadius="lg">
       <Avatar size="xl" src={isaac} alt="Isaac's Avatar" />
       <Heading as="h1" size="2xl" color="white">
         {greeting}
