@@ -3,7 +3,7 @@ import { Box, HStack, VStack, Image, Heading, Text, Button } from "@chakra-ui/re
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-const Card = ({ title, description, imageSrc, url, status, programmingLanguage }) => {
+const Card = ({ title, description, imageSrc, url, status, programmingLanguage, demo}) => {
   const color = status === "In Progress" ? "#fbbf24" : status === "Completed" ? "green.400" : "gray.400";
   const colorMap = {
       "JavaScript": "yellow.300",

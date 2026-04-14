@@ -65,6 +65,7 @@ const ProjectsSection = () => {
             url={project.url}
             status={(project.status) ? project.status : "N/A"}
             programmingLanguage={(project.programmingLanguage) ? project.programmingLanguage : "N/A"}
+            demo={project.demo}
           />
         ))}
       </Box>
