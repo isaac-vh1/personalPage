@@ -28,7 +28,7 @@ const projects = [
     status: "Completed",
     programmingLanguage: "Ruby on Rails",
     description:
-      "A Washington Business Week sponsored capstone project designed to simulate ERP functionality and enhance instruction for high school students",
+      "A Washington Business Week sponsored capstone project designed to simulate ERP functionality and enhance instruction for high school students. DEMO COMING SOON",
     getImageSrc: () => require("../images/photo3.jpg"),
   }
 ];
